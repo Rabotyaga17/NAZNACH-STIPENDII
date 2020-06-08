@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using Otdelenie.Logic;
-//ы
+//ыыыыыыыыыы
 namespace Otdelenie.Pages
 {
     /// <summary>
