@@ -1,0 +1,35 @@
+﻿<Page x:Class="Otdelenie.Pages.StudentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Otdelenie.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Height="auto" Width="auto" MinHeight="700" MinWidth="950"
+      Title="StudentsPage">
+
+    <Grid>
+        <Button Content="Добавить новый вид стипендии" HorizontalAlignment="Left" FontSize="15" Margin="381,600,0,0" VerticalAlignment="Top" Width="238" Height="28" Click="Button_Click"/>
+        <ListView HorizontalAlignment="Left" x:Name="StudentsList" Height="574" Margin="22,20,0,0" VerticalAlignment="Top" Width="auto">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Вида" Width="150" DisplayMemberBinding="{Binding ID_Vid}"/>
+                    <GridViewColumn Header="Название Стипендии" Width="170" DisplayMemberBinding="{Binding Name_Scholarship}"/>
+                    <GridViewColumn Header="Размер" Width="140" DisplayMemberBinding="{Binding Razmer}"/>
+                    <GridViewColumn Header="Номер Стипендии" Width="140" DisplayMemberBinding="{Binding ID_Scholarship}"/>
+                    <GridViewColumn Header="Академический год" Width="140" DisplayMemberBinding="{Binding Academic_Year}"/>
+                    <GridViewColumn Header="Номер семестра" Width="140" DisplayMemberBinding="{Binding ID_Semestr}"/>
+                </GridView>
+            </ListView.View>
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <EventSetter Event="UIElement.PreviewMouseRightButtonDown" Handler="ListViewItem_PreviewMouseRightButtonDown" />
+                </Style>
+            </ListView.ItemContainerStyle>
+
+
+        </ListView>
+
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="Otdelenie.Pages.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Otdelenie.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Height="auto" Width="auto" MinHeight="700" MinWidth="1000"
+      Title="AuthorizationPage">
+
+    <Grid>
+        <TextBox MaxLength="49" x:Name="LoginBox" HorizontalAlignment="Center" Height="28" Margin="0,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontSize="20" Background="LightGray"/>
+        <PasswordBox MaxLength="49" x:Name="PasswordBox" HorizontalAlignment="Center" Height="28" Margin="0,290,0,0"  VerticalAlignment="Top" Width="300" FontSize="18" Background="LightGray"/>
+        <Label x:Name="Captcha" Content="XXXX" Foreground="Black" HorizontalAlignment="Center" Margin="350,357,546,0" VerticalAlignment="Top" Width="104" Height="53" FontSize="25" HorizontalContentAlignment="Center" FontFamily="MV Boli">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF838383" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="CaptchaText" HorizontalAlignment="Center" Height="53" Margin="546,357,350,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="104" FontSize="25" HorizontalContentAlignment="Center" MaxLength="4" Background="LightGray" VerticalContentAlignment="Center"/>
+        <Button x:Name="RefreshCaptcha" VerticalContentAlignment="Top" Content="🔄" HorizontalAlignment="Center" Margin="486,380,486,0" VerticalAlignment="Top" Width="28" Click="RefreshCaptcha_Click" Height="30" FontSize="17"/>
+        <Button x:Name="Login" Content="LOGIN" HorizontalAlignment="Center" Margin="448,422,454,0" VerticalAlignment="Top" Width="98" Height="52" FontSize="15" Click="Login_Click" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Логин" HorizontalAlignment="Center" Margin="350,186,350,0" VerticalAlignment="Top" FontSize="18" FontFamily="Yu Gothic UI Semibold" Foreground="WhiteSmoke" Width="300" HorizontalContentAlignment="Center"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" Margin="350,256,350,0" VerticalAlignment="Top" FontSize="18" FontFamily="Yu Gothic UI Semibold" Foreground="White" Width="300" HorizontalContentAlignment="Center"/>
+        <Label x:Name="Error" Content="" HorizontalAlignment="Center" Margin="350,323,350,0" VerticalAlignment="Top" FontSize="12" FontFamily="Yu Gothic UI Semibold" Width="300" HorizontalContentAlignment="Center" Foreground="Red" Height="29"/>
+        <Label Content="NAZNACHENIE STIPENDII" HorizontalAlignment="Center" Margin="230,73,230,0" VerticalAlignment="Top" FontSize="40" FontFamily="Segoe UI Black" Height="72" Width="532" Foreground="#00FF00" Background="#00000000"/>
+    </Grid>
+</Page>
